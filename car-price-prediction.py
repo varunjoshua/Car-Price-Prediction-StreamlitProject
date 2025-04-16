@@ -6,6 +6,7 @@ import datetime
 
 df = pd.read_csv('cars24-data.csv')
 
+
 st.header('Used Cars Price Estimater')
 st.write("Get a price estimate of used cars based on various features such as fuel type, engine power, transmission type, and number of seats.")
 
@@ -67,7 +68,7 @@ price = price_prediction(fuel_type, engine, transmission, seats)
 
 col1, col2, col3 = st.columns(3)
 
-if col2.button("Get Price", type="primary", use_container_width=True):
+if col2.button("Get Price", use_container_width=True):
     col2.subheader(f"Rs. {price[0].round(2)} lakh")
 
 
